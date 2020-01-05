@@ -1,4 +1,4 @@
-package io.sangui
+package io.myratpstop
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
