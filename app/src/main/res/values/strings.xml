@@ -3,4 +3,11 @@
     <string name="ratp_stops_title">RATP STOPS</string>
     <string name="unknown_time">unknown</string>
     <string name="unknown">unknown</string>
+    <string name="time_before_next_bus">Time before next bus :</string>
+    <string name="time_before_next_2nd_bus">Time before 2nd bus :</string>
+
+    <string-array name="ar_array">
+        <item>To Porte d\'Orléan (est)</item>
+        <item>To Pont de Sèvre (ouest)</item>
+    </string-array>
 </resources>
