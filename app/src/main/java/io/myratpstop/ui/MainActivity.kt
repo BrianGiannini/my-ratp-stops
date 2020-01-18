@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import io.myratpstop.R
 import io.myratpstop.model.ScheduleModel
@@ -12,8 +13,8 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.schedules_view.*
 import timber.log.Timber
-
 
 
 class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
@@ -36,16 +37,25 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             android.R.layout.simple_spinner_item
         ).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            ar_spinner.adapter = adapter
+            spinner_side.adapter = adapter
         }
 
-        // first call
-        beginSearch(currentStop, currentWay)
-        ar_spinner.onItemSelectedListener = this
+        spinner_side.onItemSelectedListener = this
 
         fab_refresh.setOnClickListener {
             beginSearch(currentStop, currentWay)
         }
+
+        swipe_refresh.setOnRefreshListener {
+            swipe_refresh.isRefreshing = false
+            beginSearch(currentStop, currentWay)
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        beginSearch(currentStop, currentWay)
     }
 
     override fun onPause() {
@@ -86,8 +96,6 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             }
         }
         beginSearch(currentStop, currentWay)
-
     }
-
 
 }
