@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/stop2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unknown"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/title_second_stop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.70"
+        app:layout_constraintStart_toEndOf="@+id/time1"
+        app:layout_constraintTop_toTopOf="@+id/time2" />
 
     <Spinner
         android:id="@+id/spinner_side"
@@ -16,44 +28,58 @@
         android:id="@+id/time2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
         android:text="@string/unknown"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/title_second_stop"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/time1" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/title_second_stop"
+        app:layout_constraintTop_toTopOf="@+id/title_second_stop" />
 
     <TextView
         android:id="@+id/time1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
         android:text="@string/unknown"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/title_first_stop"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_side" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/title_first_stop"
+        app:layout_constraintTop_toTopOf="@+id/title_first_stop" />
+
+    <TextView
+        android:id="@+id/stop1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unknown"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/title_first_stop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.70"
+        app:layout_constraintStart_toEndOf="@+id/time1"
+        app:layout_constraintTop_toTopOf="@+id/title_first_stop" />
 
     <TextView
         android:id="@+id/title_first_stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:text="@string/time_before_next_bus"
-        app:layout_constraintBottom_toBottomOf="@+id/time1"
-        app:layout_constraintEnd_toStartOf="@+id/time1"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/time_before_next_stop"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/time1" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner_side" />
 
     <TextView
         android:id="@+id/title_second_stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:text="@string/time_before_next_2nd_bus"
-        app:layout_constraintBottom_toBottomOf="@+id/time2"
-        app:layout_constraintEnd_toStartOf="@+id/time2"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/time_before_next_2nd_stop"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/time2" />
+        app:layout_constraintTop_toBottomOf="@+id/title_first_stop" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

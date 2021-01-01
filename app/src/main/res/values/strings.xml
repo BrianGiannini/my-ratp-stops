@@ -2,11 +2,11 @@
     <string name="app_name">My stops</string>
     <string name="ratp_stops_title">My stops</string>
     <string name="unknown">unknown</string>
-    <string name="time_before_next_bus">Time before next bus :</string>
-    <string name="time_before_next_2nd_bus">Time before 2nd bus :</string>
+    <string name="time_before_next_stop">1st stop:</string>
+    <string name="time_before_next_2nd_stop">2nd stop:</string>
 
     <string-array name="ar_array">
-        <item>To Porte d\'Orléan (est)</item>
-        <item>To Pont de Sèvre (ouest)</item>
+        <item>Retour</item>
+        <item>Aller</item>
     </string-array>
 </resources>

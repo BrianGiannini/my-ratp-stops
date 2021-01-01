@@ -77,6 +77,8 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     private fun displaySchedules(schedules: List<ScheduleModel.Schedule>) {
         time1.text = schedules[0].message
         time2.text = schedules[1].message
+        stop1.text = schedules[0].destination
+        stop2.text = schedules[1].destination
     }
 
     override fun onNothingSelected(parent: AdapterView<*>) {
@@ -86,7 +88,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
         when (pos) {
             0 ->  {
-                currentStop = "hotel+de+ville+de+boulogne+billancourt"
+                currentStop = "rue+du+point+du+jour"
                 currentWay = "R"
             }
             1 -> {
